@@ -12,6 +12,7 @@
 		7C869E872A5A9639003F5DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C869E862A5A9639003F5DC9 /* Assets.xcassets */; };
 		7C869E8A2A5A9639003F5DC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C869E892A5A9639003F5DC9 /* Preview Assets.xcassets */; };
 		7C869E912A5A9648003F5DC9 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 7C869E902A5A9648003F5DC9 /* Readme.md */; };
+		7C869E932A5AA036003F5DC9 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7C869E922A5AA036003F5DC9 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		7C869E862A5A9639003F5DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C869E892A5A9639003F5DC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7C869E902A5A9648003F5DC9 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		7C869E922A5AA036003F5DC9 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				7C869E822A5A9639003F5DC9 /* WorldScrambleApp.swift */,
 				7C869E842A5A9639003F5DC9 /* ContentView.swift */,
 				7C869E862A5A9639003F5DC9 /* Assets.xcassets */,
+				7C869E922A5AA036003F5DC9 /* start.txt */,
 				7C869E882A5A9639003F5DC9 /* Preview Content */,
 			);
 			path = WorldScramble;
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C869E8A2A5A9639003F5DC9 /* Preview Assets.xcassets in Resources */,
+				7C869E932A5AA036003F5DC9 /* start.txt in Resources */,
 				7C869E872A5A9639003F5DC9 /* Assets.xcassets in Resources */,
 				7C869E912A5A9648003F5DC9 /* Readme.md in Resources */,
 			);
