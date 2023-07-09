@@ -16,6 +16,8 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var score = 0
+    
     var body: some View {
         NavigationView {
             List {
@@ -43,7 +45,13 @@ struct ContentView: View {
                 Text(errorMessage)
             }
             .toolbar {
-                Button("Restart", action: startGame)
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Restart", action: startGame)
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("Score: \(score)")
+                }
             }
         }
     }
@@ -53,31 +61,37 @@ struct ContentView: View {
         
         guard isWordLongerThan3(word: newWord) else {
             showError(title: "Word is too short", message: "Please use words at least 3 letters long!")
+            score -= newWord.count
             return
         }
         
         guard isNotRootWord(word: newWord) else {
             showError(title: "That's the original word", message: "Please use a different word!")
+            score -= newWord.count
             return
         }
         
         guard isOriginal(word: newWord) else {
             showError(title: "You've already used that", message: "Please use a new word!")
+            score -= newWord.count
             return
         }
         
         guard isPossible(word: newWord) else {
             showError(title: "That's not possible", message: "You need to use letters only from '\(rootWord)'!")
+            score -= newWord.count
             return
         }
         
         guard isReal(word: newWord) else {
             showError(title: "That word is made up", message: "You must use real words from the English language!")
+            score -= newWord.count
             return
         }
         
         withAnimation {
             usedWords.insert(newWord, at: 0)
+            score += newWord.count
         }
         
         currentWord = ""
@@ -90,6 +104,7 @@ struct ContentView: View {
                 rootWord = words.randomElement() ?? "silkworm"
                 usedWords = []
                 currentWord = ""
+                score = 0
                 return
             }
         }
