@@ -5,3 +5,5 @@ This is project 5 of 100 days of SwiftUI by Paul Hudson (link [here](https://www
 As usual, there will be challenges at the end of the guided tutorial part of the project for me to solve on my own, and I will add separate commits for each challenge as I complete them.
 
 **Challenge 1**: Disallow answers that are shorter than three letters or are just our start word.
+
+**Challenge 2**: Add a toolbar button that calls startGame(), so users can restart with a new word whenever they want to.

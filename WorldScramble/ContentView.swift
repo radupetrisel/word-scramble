@@ -42,6 +42,9 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                Button("Restart", action: startGame)
+            }
         }
     }
     
@@ -85,6 +88,8 @@ struct ContentView: View {
             if let startWords = try? String(contentsOf: startUrl) {
                 let words = startWords.components(separatedBy: "\n")
                 rootWord = words.randomElement() ?? "silkworm"
+                usedWords = []
+                currentWord = ""
                 return
             }
         }
